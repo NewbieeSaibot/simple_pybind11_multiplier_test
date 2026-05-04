@@ -4,7 +4,7 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "simple_pybind11_multiplier_test"
-version = "0.1.0"
+version = "0.1.1"
 description = "A simple pybind11 example: a stateful C++ multiplier exposed to Python"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -23,3 +23,4 @@ Repository = "https://github.com/NewbieeSaibot/simple_pybind11_multiplier_test"
 
 [tool.cibuildwheel]
 build = "cp310-* cp311-* cp312-* cp313-*"
+skip = "*_i686"   # 32-bit Linux is effectively unused in 2024+
